@@ -29,3 +29,7 @@ class DiceBag(object):
         for i in int(lst_notation[0]):
             die1 = Die(int(lst_notation[1]))
             self.dice.append(die1)
+    def roll_all(self):
+        for obj in self.dice:
+            obj.roll_die()
+            self.dice_roll.append(obj.get_die_face())
