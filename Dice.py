@@ -13,3 +13,15 @@ class Die(object):
             pass
     def get_die_face(self):
         return self.die_face
+    
+class DiceBag(object):
+    def __init__(self):
+        self.dice = []
+        self.dice_roll = []
+    def add_die(self, die_obj):
+        self.dice.append(die_obj)
+    def remove_die(self, die_obj):
+        self.dice.remove(die_obj)
+    def remove_die_index(self, index):
+        del self.dice[index]
+        
