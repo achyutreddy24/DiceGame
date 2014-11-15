@@ -18,10 +18,14 @@ class DiceBag(object):
     def __init__(self):
         self.dice = []
         self.dice_roll = []
-    def add_die(self, die_obj):
+    def add_die_obj(self, die_obj):
         self.dice.append(die_obj)
     def remove_die(self, die_obj):
         self.dice.remove(die_obj)
     def remove_die_index(self, index):
         del self.dice[index]
-        
+    def add_die_notation(self, standard_die_notation):
+        lst_notation = standard_die_notation.split("d")
+        for i in int(lst_notation[0]):
+            die1 = Die(int(lst_notation[1]))
+            self.dice.append(die1)
