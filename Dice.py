@@ -33,3 +33,5 @@ class DiceBag(object):
         for obj in self.dice:
             obj.roll_die()
             self.dice_roll.append(obj.get_die_face())
+    def get_dice_roll(self):
+        return self.dice_roll
