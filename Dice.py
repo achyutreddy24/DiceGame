@@ -26,9 +26,11 @@ class DiceBag(object):
         del self.dice[index]
     def add_die_notation(self, standard_die_notation):
         lst_notation = standard_die_notation.split("d")
-        for i in int(lst_notation[0]):
+        i = 0
+        while (i<int(lst_notation[0])):
             die1 = Die(int(lst_notation[1]))
             self.dice.append(die1)
+            i = i +1
     def roll_all(self):
         for obj in self.dice:
             obj.roll_die()
